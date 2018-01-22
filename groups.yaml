@@ -1,0 +1,31 @@
+heating:
+  name: Heating
+  entities:
+    - switch.heating
+    - sensor.met_office_temperature
+    - sensor.met_office_weather
+    - input_number.heating_trigger
+
+lighting:
+  name: Lighting
+  entities:
+    - switch.tplink_switch
+
+smoke_co2:
+  name: Smoke & CO2
+  entities:
+    - sensor.downstairs_nest_protect_smoke_status
+    - sensor.upstairs_nest_protect_smoke_status
+    - sensor.downstairs_nest_protect_co_status
+    - sensor.upstairs_nest_protect_co_status
+    - sensor.downstairs_nest_protect_battery_health
+    - sensor.upstairs_nest_protect_battery_health
+    - binary_sensor.downstairs_nest_protect_online
+    - binary_sensor.upstairs_nest_protect_online
+
+data:
+  name: Other Data
+  entities:
+    - sun.sun
+    - sensor.random_sensor
+

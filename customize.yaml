@@ -1,0 +1,48 @@
+switch.tplink_switch:
+  friendly_name: Kitchen Lamp
+  icon: mdi:lightbulb
+
+switch.heating:
+  icon: mdi:fire
+
+sensor.met_office_temperature:
+  friendly_name: Outside Temperature
+
+sensor.met_office_weather:
+  friendly_name: Weather
+
+sensor.downstairs_nest_protect_battery_health:
+  friendly_name: Downstairs Battery
+  icon: mdi:battery
+
+sensor.upstairs_nest_protect_battery_health:
+  friendly_name: Upstairs Battery
+  icon: mdi:battery
+
+sensor.downstairs_nest_protect_co_status:
+  friendly_name: Downstairs CO2
+  icon: mdi:delta
+
+sensor.upstairs_nest_protect_co_status:
+  friendly_name: Upstairs CO2
+  icon: mdi:delta
+
+sensor.downstairs_nest_protect_smoke_status:
+  friendly_name: Downstairs Smoke
+  icon: mdi:amazon-clouddrive
+
+sensor.upstairs_nest_protect_smoke_status:
+  friendly_name: Upstairs Smoke
+  icon: mdi:amazon-clouddrive
+
+binary_sensor.downstairs_nest_protect_online:
+  friendly_name: Downstairs Connection
+  icon: mdi:lan-connect
+
+binary_sensor.upstairs_nest_protect_online:
+  friendly_name: Upstairs Connection
+  icon: mdi:lan-connect
+
+sensor.random_sensor:
+  friendly_name: Random Number
+  icon: mdi:comment-question-outline

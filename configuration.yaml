@@ -1,0 +1,53 @@
+homeassistant:
+  name: St Helena Rd
+  latitude: 53.76706
+  longitude: -1.78070
+  elevation: 257
+  unit_system: metric
+  time_zone: Europe/London
+  customize: !include customize.yaml
+
+frontend:
+config:
+http:
+updater:
+discovery:
+history:
+logbook:
+map:
+sun:
+cloud:
+ios:
+
+sensor:
+  - platform: metoffice
+    api_key: !secret metoffice_api_key
+    monitored_conditions:
+      - weather
+      - temperature
+  - platform: random
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+switch:
+  - platform: tplink
+    host: 192.168.40.6
+  - platform: rpi_gpio
+    ports:
+      4: Heating
+    invert_logic: true
+
+input_number:
+  heating_trigger:
+    name: Activation at
+    initial: 10
+    min: 0
+    max: 20
+    mode: box
+    unit_of_measurement: C
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
