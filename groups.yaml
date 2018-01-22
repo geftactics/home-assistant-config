@@ -11,6 +11,11 @@ lighting:
   entities:
     - switch.tplink_switch
 
+family:
+  name: Family
+  entities:
+    - device_tracker.geoff
+
 smoke_co2:
   name: Smoke & CO2
   entities:

@@ -7,9 +7,12 @@ homeassistant:
   time_zone: Europe/London
   customize: !include customize.yaml
 
+http:
+  api_password: !secret http_api_password
+  base_url: dera.squiggle.org:8123
+
 frontend:
 config:
-http:
 updater:
 discovery:
 history:
@@ -19,13 +22,16 @@ sun:
 cloud:
 ios:
 
+notify:
+ - platform: ios
+
 sensor:
   - platform: metoffice
     api_key: !secret metoffice_api_key
     monitored_conditions:
       - weather
       - temperature
-  - platform: random
+#  - platform: random
 
 nest:
   client_id: !secret nest_client_id

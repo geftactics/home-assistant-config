@@ -1,3 +1,9 @@
+sensor.gef_tactics_battery_level:
+  hidden: true
+
+sensor.gef_tactics_battery_state:
+  hidden: true
+
 switch.tplink_switch:
   friendly_name: Kitchen Lamp
   icon: mdi:lightbulb
