@@ -9,18 +9,26 @@ homeassistant:
 
 http:
   api_password: !secret http_api_password
-  base_url: dera.squiggle.org:8123
+  base_url: dera.squiggle.org
 
-frontend:
+cloud:
 config:
-updater:
-discovery:
+frontend:
 history:
+ios:
 logbook:
 map:
 sun:
-cloud:
-ios:
+updater:
+
+binary_sensor:
+  - platform: ping
+    host: 192.168.40.33
+    name: Lounge TV
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
 
 notify:
  - platform: ios
@@ -31,11 +39,6 @@ sensor:
     monitored_conditions:
       - weather
       - temperature
-#  - platform: random
-
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
 
 switch:
   - platform: tplink
@@ -44,15 +47,6 @@ switch:
     ports:
       4: Heating
     invert_logic: true
-
-input_number:
-  heating_trigger:
-    name: Activation at
-    initial: 10
-    min: 0
-    max: 20
-    mode: box
-    unit_of_measurement: C
 
 group: !include groups.yaml
 automation: !include automations.yaml
