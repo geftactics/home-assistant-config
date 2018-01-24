@@ -1,3 +1,9 @@
+sensor.lixs_iphone_battery_level:
+  hidden: true
+
+sensor.lixs_iphone_battery_state:
+  hidden: true
+
 sensor.gef_tactics_battery_level:
   hidden: true
 
@@ -10,6 +16,9 @@ switch.tplink_switch:
 
 switch.heating:
   icon: mdi:fire
+
+binary_sensor.lounge_tv:
+  icon: mdi:monitor
 
 sensor.met_office_temperature:
   friendly_name: Outside Temperature
