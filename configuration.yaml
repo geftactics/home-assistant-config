@@ -16,7 +16,6 @@ config:
 frontend:
 history:
 ios:
-logbook:
 map:
 sun:
 updater:
@@ -25,6 +24,11 @@ binary_sensor:
   - platform: ping
     host: 192.168.40.33
     name: Lounge TV
+
+input_boolean:
+  test_button:
+    name: Test button
+    initial: off
 
 logbook:
   exclude:
