@@ -26,6 +26,13 @@ binary_sensor:
     host: 192.168.40.33
     name: Lounge TV
 
+logbook:
+  exclude:
+    entities:
+      - group.data
+      - group.heating
+      - group.lighting
+      - group.smoke_co2
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
