@@ -42,11 +42,11 @@ sensor.upstairs_nest_protect_battery_health:
   icon: mdi:battery
 
 sensor.downstairs_nest_protect_co_status:
-  friendly_name: Downstairs CO2
+  friendly_name: Downstairs carbon monoxide
   icon: mdi:delta
 
 sensor.upstairs_nest_protect_co_status:
-  friendly_name: Upstairs CO2
+  friendly_name: Upstairs carbon monoxide
   icon: mdi:delta
 
 sensor.downstairs_nest_protect_smoke_status:

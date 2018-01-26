@@ -36,7 +36,7 @@ logbook:
       - group.data
       - group.heating
       - group.lighting
-      - group.smoke_co2
+      - group.smoke_co
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret

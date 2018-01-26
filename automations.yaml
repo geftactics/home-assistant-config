@@ -17,6 +17,7 @@
       message: "Smoke detected at home!!"
 
 
+
 - alias: Notify - Smoke cleared
   initial_state: 'on'
   trigger:
@@ -31,7 +32,8 @@
       message: "Smoke has cleared at home"
 
 
-- alias: Notify - CO2 detected
+
+- alias: Notify - Carbon monoxide detected
   initial_state: 'on'
   trigger:
     - platform: state
@@ -47,10 +49,11 @@
   action:
     service: notify.ios_Geoff
     data:
-      message: "CO2 detected at home!!"
+      message: "Carbon monoxide detected at home!!"
 
 
-- alias: Notify - CO2 cleared
+
+- alias: Notify - Carbon monoxide cleared
   initial_state: 'on'
   trigger:
     - platform: state
@@ -61,7 +64,73 @@
   action:
     service: notify.ios_Geoff
     data:
-      message: "CO2 has cleared at home"
+      message: "Carbon monoxide has cleared at home"
+
+
+
+- alias: Notify - Nest battery warning
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'Warning'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+    - platform: state
+      to: 'Emergency'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest protect has a battery issue!"
+
+
+
+- alias: Notify - Nest battery ok
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'Ok'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest protect battery is now ok."
+
+
+
+- alias: Notify - Nest offline
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'Off'
+      entity_id:
+        - binary_sensor.downstairs_nest_protect_online
+        - binary_sensor.upstairs_nest_protect_online
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "A Nest device has gone offline."
+
+
+
+- alias: Notify - Nest online notice
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'On'
+      entity_id:
+        - binary_sensor.downstairs_nest_protect_online
+        - binary_sensor.upstairs_nest_protect_online
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest device has reconnected."
+
 
 
 - alias: Kitchen Lamp - On at sunset
@@ -75,6 +144,7 @@
     entity_id: switch.tplink_switch
 
 
+
 - alias: Kitchen Lamp - Off at night
   initial_state: 'on'
   trigger:
@@ -83,6 +153,7 @@
   action:
     service: switch.turn_off
     entity_id: switch.tplink_switch
+
     
 
 - alias: Heating - Mornings
@@ -100,6 +171,7 @@
     - delay: '02:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
+
 
 
 - alias: Heating - Evenings
@@ -123,6 +195,7 @@
     - delay: '03:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
+
 
 
 - alias: Heating - Weekends

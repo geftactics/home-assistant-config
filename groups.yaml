@@ -18,8 +18,8 @@ family:
     - device_tracker.lix
     - device_tracker.angus
 
-smoke_co2:
-  name: Smoke & CO2
+smoke_co:
+  name: Smoke & Carbon monoxide
   entities:
     - sensor.downstairs_nest_protect_smoke_status
     - sensor.upstairs_nest_protect_smoke_status
