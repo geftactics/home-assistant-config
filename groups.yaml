@@ -36,3 +36,4 @@ data:
     - sun.sun
     - binary_sensor.lounge_tv
     - input_boolean.test_button
+    - history_graph.system_stats
