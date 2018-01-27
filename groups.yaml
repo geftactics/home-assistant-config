@@ -21,7 +21,7 @@ family:
     - device_tracker.angus
 
 smoke_co:
-  name: Smoke & Carbon monoxide
+  name: CO & Smoke
   entities:
     - sensor.downstairs_nest_protect_smoke_status
     - sensor.upstairs_nest_protect_smoke_status

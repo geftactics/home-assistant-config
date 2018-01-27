@@ -67,6 +67,8 @@ input_boolean:
 logbook:
   exclude:
     entities:
+      - automation.heating__boost_on
+      - automation.heating__boost_off
       - group.data
       - group.heating
       - group.lighting
