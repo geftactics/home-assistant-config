@@ -1,7 +1,9 @@
 heating:
   name: Heating
+  control: hidden
   entities:
-    - switch.heating
+    - binary_sensor.heating
+    - input_boolean.heating_boost
     - sensor.met_office_temperature
     - sensor.met_office_weather
     - input_number.heating_trigger
@@ -35,5 +37,6 @@ data:
   entities:
     - sun.sun
     - binary_sensor.lounge_tv
-    - input_boolean.test_button
+    # - sensor.cpu_used
+    # - sensor.ram_used
     - history_graph.system_stats

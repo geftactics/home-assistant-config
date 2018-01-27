@@ -27,7 +27,15 @@ switch.tplink_switch:
   icon: mdi:lightbulb
 
 switch.heating:
+  hidden: true
+  emulated_hue_hidden: true
+
+binary_sensor.heating:
   icon: mdi:fire
+
+input_boolean.heating_boost:
+  icon: mdi:camera-timer
+  emulated_hue_name: "Heating"
 
 binary_sensor.lounge_tv:
   icon: mdi:monitor

@@ -7,9 +7,13 @@ homeassistant:
   time_zone: Europe/London
   customize: !include customize.yaml
 
+
+
 http:
   api_password: !secret http_api_password
   base_url: dera.squiggle.org
+
+
 
 cloud:
 config:
@@ -20,10 +24,25 @@ map:
 sun:
 updater:
 
+
+
 binary_sensor:
   - platform: ping
     host: 192.168.40.33
     name: Lounge TV
+  - platform: rpi_gpio
+    ports:
+      4: Heating
+    invert_logic: true
+
+
+
+emulated_hue:
+  exposed_domains:
+    - input_boolean
+    - switch
+
+
 
 history_graph:
   system:
@@ -31,13 +50,15 @@ history_graph:
     entities:
       - sensor.cpu_used
       - sensor.ram_used
-    hours_to_show: 24
-    refresh: 60
+
+
 
 input_boolean:
-  test_button:
-    name: Test button
+  heating_boost:
+    name: Boost
     initial: off
+
+
 
 logbook:
   exclude:
@@ -46,12 +67,19 @@ logbook:
       - group.heating
       - group.lighting
       - group.smoke_co
+
+
+
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+
+
 notify:
  - platform: ios
+
+
 
 sensor:
   - platform: metoffice
@@ -64,6 +92,8 @@ sensor:
       - type: memory_use_percent
       - type: processor_use
 
+
+
 switch:
   - platform: tplink
     host: 192.168.40.6
@@ -71,6 +101,8 @@ switch:
     ports:
       4: Heating
     invert_logic: true
+
+
 
 group: !include groups.yaml
 automation: !include automations.yaml

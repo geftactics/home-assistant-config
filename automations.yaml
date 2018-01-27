@@ -118,7 +118,7 @@
 
 
 
-- alias: Notify - Nest online notice
+- alias: Notify - Nest online
   initial_state: 'on'
   trigger:
     - platform: state
@@ -189,12 +189,6 @@
     - delay: '03:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
-    - delay: '03:00:00'
-    - service: switch.turn_off
-      entity_id: switch.heating
-    - delay: '03:00:00'
-    - service: switch.turn_off
-      entity_id: switch.heating
 
 
 
@@ -219,3 +213,32 @@
     - delay: '05:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
+
+
+
+- alias: Heating - Boost off
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'off'
+      entity_id: input_boolean.heating_boost
+  action:
+    - service: switch.turn_off
+      entity_id: switch.heating
+
+
+
+- alias: Heating - Boost on
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      to: 'on'
+      entity_id: input_boolean.heating_boost
+  action:
+    - service: switch.turn_on
+      entity_id: switch.heating
+    - delay: '00:00:10'
+    - service: switch.turn_off
+      entity_id: switch.heating
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.heating_boost
