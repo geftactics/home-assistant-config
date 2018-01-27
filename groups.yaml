@@ -37,6 +37,6 @@ data:
   entities:
     - sun.sun
     - binary_sensor.lounge_tv
-     - sensor.cpu_used
-     - sensor.ram_used
+    - sensor.cpu_used
+    - sensor.ram_used
     - history_graph.system_stats
