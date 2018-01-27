@@ -1,8 +1,8 @@
 sensor.cpu_used:
-  hidden: true
+  hidden: false
 
 sensor.ram_used:
-  hidden: true
+  hidden: false
 
 sensor.anguss_iphone_battery_level:
   hidden: true

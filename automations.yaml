@@ -237,7 +237,7 @@
   action:
     - service: switch.turn_on
       entity_id: switch.heating
-    - delay: '00:00:10'
+    - delay: '02:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
     - service: input_boolean.turn_off
