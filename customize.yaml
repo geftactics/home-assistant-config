@@ -1,3 +1,7 @@
+light.bedroom_mirror:
+  friendly_name: Bedroom Mirror
+  emulated_hue_name: "Bedroom Mirror"
+
 sensor.cpu_used:
   hidden: false
 

@@ -12,6 +12,7 @@ lighting:
   name: Lighting
   entities:
     - switch.tplink_switch
+    - light.bedroom_mirror
 
 family:
   name: Family
