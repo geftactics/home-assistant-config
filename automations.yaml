@@ -133,26 +133,26 @@
 
 
 
-- alias: Kitchen Lamp - On at sunset
+- alias: Ellie Lamp - On at sunset
   initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
     offset: "-00:00:00"
   action:
-    service: switch.turn_on
-    entity_id: switch.tplink_switch
+    service: light.turn_on
+    entity_id: light.tplink_light
 
 
 
-- alias: Kitchen Lamp - Off at night
+- alias: Ellie Lamp - Off in morningt
   initial_state: 'on'
   trigger:
     platform: time
-    at: '22:00:00'
+    at: '08:00:00'
   action:
-    service: switch.turn_off
-    entity_id: switch.tplink_switch
+    service: light.turn_off
+    entity_id: light.tplink_light
 
 
 
