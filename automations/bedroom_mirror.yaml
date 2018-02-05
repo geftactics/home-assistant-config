@@ -1,7 +1,10 @@
-- alias: Bedroom Mirror - On in morning
+- alias: Bedroom Mirror - On weekday mornings
   trigger:
     - platform: time
       at: '06:30:00'
+  condition:
+    - condition: time
+      weekday: ['mon', 'tue', 'wed', 'thu', 'fri']
   action:
     - service: light.turn_on
       entity_id: light.bedroom_mirror
@@ -9,4 +12,36 @@
     - service: light.turn_off
       entity_id: light.bedroom_mirror
 
-    
+
+- alias: Bedroom Mirror - On weekend mornings
+  trigger:
+    - platform: time
+      at: '08:00:00'
+  condition:
+    - condition: time
+      weekday: ['sat', 'sun']
+  action:
+    - service: light.turn_on
+      entity_id: light.bedroom_mirror
+    - delay: '01:00:00'
+    - service: light.turn_off
+      entity_id: light.bedroom_mirror
+
+
+- alias: Bedroom Mirror - On at sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:00"
+  action:
+    - service: light.turn_on
+      entity_id: light.bedroom_mirror
+
+
+- alias: Bedroom Mirror - Off at night
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    service: light.turn_off
+    entity_id: light.bedroom_mirror
