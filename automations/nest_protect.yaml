@@ -1,0 +1,127 @@
+- alias: Notify - Smoke detected
+  trigger:
+    - platform: state
+      to: 'Warning'
+      entity_id:
+        - sensor.downstairs_nest_protect_smoke_status
+        - sensor.upstairs_nest_protect_smoke_status
+    - platform: state
+      to: 'Emergency'
+      entity_id:
+        - sensor.downstairs_nest_protect_smoke_status
+        - sensor.upstairs_nest_protect_smoke_status
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Smoke detected at home!!"
+
+
+
+- alias: Notify - Smoke cleared
+  trigger:
+    - platform: state
+      to: 'Ok'
+      entity_id:
+        - sensor.downstairs_nest_protect_smoke_status
+        - sensor.upstairs_nest_protect_smoke_status
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Smoke has cleared at home"
+
+
+
+- alias: Notify - Carbon monoxide detected
+  trigger:
+    - platform: state
+      to: 'Warning'
+      entity_id:
+        - sensor.downstairs_nest_protect_co_status
+        - sensor.upstairs_nest_protect_co_status
+    - platform: state
+      to: 'Emergency'
+      entity_id:
+        - sensor.downstairs_nest_protect_co_status
+        - sensor.upstairs_nest_protect_co_status
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Carbon monoxide detected at home!!"
+
+
+
+- alias: Notify - Carbon monoxide cleared
+  trigger:
+    - platform: state
+      to: 'Ok'
+      entity_id:
+        - sensor.downstairs_nest_protect_co_status
+        - sensor.upstairs_nest_protect_co_status
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Carbon monoxide has cleared at home"
+
+
+
+- alias: Notify - Nest battery warning
+  trigger:
+    - platform: state
+      to: 'Warning'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+    - platform: state
+      to: 'Emergency'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest protect has a battery issue!"
+
+
+
+- alias: Notify - Nest battery ok
+  trigger:
+    - platform: state
+      to: 'Ok'
+      entity_id:
+        - sensor.downstairs_nest_protect_battery_health
+        - sensor.upstairs_nest_protect_battery_health
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest protect battery is now ok."
+
+
+
+- alias: Notify - Nest offline
+  trigger:
+    - platform: state
+      to: 'Off'
+      entity_id:
+        - binary_sensor.downstairs_nest_protect_online
+        - binary_sensor.upstairs_nest_protect_online
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "A Nest device has gone offline."
+
+
+
+- alias: Notify - Nest online
+  trigger:
+    - platform: state
+      to: 'On'
+      entity_id:
+        - binary_sensor.downstairs_nest_protect_online
+        - binary_sensor.upstairs_nest_protect_online
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Nest device has reconnected."
+
+
+

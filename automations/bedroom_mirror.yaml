@@ -1,0 +1,12 @@
+- alias: Bedroom Mirror - On in morning
+  trigger:
+    - platform: time
+      at: '06:30:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.bedroom_mirror
+    - delay: '01:30:00'
+    - service: light.turn_off
+      entity_id: light.bedroom_mirror
+
+    

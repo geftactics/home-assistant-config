@@ -1,0 +1,19 @@
+- alias: Kitchen Lamp - On at sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:00"
+  action:
+    service: light.turn_on
+    entity_id: light.kitchen_lamp
+
+
+
+- alias: Kitchen Lamp - Off at night
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    service: light.turn_off
+    entity_id: light.kitchen_lamp
+
