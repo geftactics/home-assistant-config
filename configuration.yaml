@@ -9,6 +9,7 @@ homeassistant:
   customize_domain:
     automation:
       hidden: true
+      initial_state: 'on'
 
 
 
@@ -24,6 +25,7 @@ frontend:
 history:
 ios:
 map:
+mqtt:
 sun:
 updater:
 
@@ -72,6 +74,14 @@ light:
         name: bedroom_mirror
         protocol: 'ledenet'
         mode: "rgb"
+  - platform: mqtt
+    name: "Kitchen Lamp"
+    command_topic: "cmnd/kitchen/POWER"
+    state_topic: "stat/kitchen/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
 
 
 
@@ -114,6 +124,7 @@ sensor:
 switch:
   - platform: tplink
     host: 192.168.40.6
+    name: "Ellies Lamp"
   - platform: rpi_gpio
     ports:
       4: Heating
@@ -122,5 +133,5 @@ switch:
 
 
 group: !include groups.yaml
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations/
 script: !include scripts.yaml
