@@ -24,7 +24,6 @@ frontend:
 history:
 ios:
 map:
-mqtt:
 sun:
 updater:
 
@@ -73,16 +72,7 @@ light:
         name: bedroom_mirror
         protocol: 'ledenet'
         mode: "rgb"
-  - platform: tplink
-    host: 192.168.40.6
-  - platform: mqtt
-    name: "Kitchen Lamp"
-    command_topic: "cmnd/kitchen/POWER"
-    state_topic: "stat/kitchen/POWER"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-    retain: true
+
 
 
 logbook:
@@ -122,6 +112,8 @@ sensor:
 
 
 switch:
+  - platform: tplink
+    host: 192.168.40.6
   - platform: rpi_gpio
     ports:
       4: Heating

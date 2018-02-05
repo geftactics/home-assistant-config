@@ -11,8 +11,7 @@ heating:
 lighting:
   name: Lighting
   entities:
-    - light.kitchen_lamp
-    - light.tplink_light
+    - switch.tplink_switch
     - light.bedroom_mirror
 
 family:

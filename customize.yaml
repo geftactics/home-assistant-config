@@ -26,8 +26,8 @@ sensor.gef_tactics_battery_level:
 sensor.gef_tactics_battery_state:
   hidden: true
 
-light.tplink_light:
-  friendly_name: Ellies Lamp
+switch.tplink_switch:
+  friendly_name: Kitchen Lamp
   icon: mdi:lightbulb
 
 switch.heating:
