@@ -8,15 +8,13 @@ homeassistant:
   customize: !include customize.yaml
   customize_domain:
     automation:
-      hidden: false
+      hidden: true
       initial_state: 'on'
-
 
 
 http:
   api_password: !secret http_api_password
   base_url: dera.squiggle.org
-
 
 
 cloud:
@@ -30,7 +28,6 @@ sun:
 updater:
 
 
-
 binary_sensor:
   - platform: ping
     host: 192.168.40.33
@@ -41,12 +38,10 @@ binary_sensor:
     invert_logic: true
 
 
-
 emulated_hue:
   exposed_domains:
     - input_boolean
     - switch
-
 
 
 history_graph:
@@ -59,12 +54,10 @@ history_graph:
     refresh: 60
 
 
-
 input_boolean:
   heating_boost:
     name: Boost
     initial: off
-
 
 
 light:
@@ -84,7 +77,6 @@ light:
     retain: true
 
 
-
 logbook:
   exclude:
     entities:
@@ -96,16 +88,13 @@ logbook:
       - group.smoke_co
 
 
-
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
 
-
 notify:
  - platform: ios
-
 
 
 sensor:
@@ -120,7 +109,6 @@ sensor:
       - type: processor_use
 
 
-
 switch:
   - platform: tplink
     host: 192.168.40.6
@@ -129,7 +117,6 @@ switch:
     ports:
       4: Heating
     invert_logic: true
-
 
 
 group: !include groups.yaml

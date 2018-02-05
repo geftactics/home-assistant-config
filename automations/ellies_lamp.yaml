@@ -8,7 +8,6 @@
     entity_id: switch.ellies_lamp
 
 
-
 - alias: Ellies Lamp - Off in morning
   trigger:
     platform: time

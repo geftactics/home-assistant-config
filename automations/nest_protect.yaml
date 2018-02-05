@@ -16,7 +16,6 @@
       message: "Smoke detected at home!!"
 
 
-
 - alias: Notify - Smoke cleared
   trigger:
     - platform: state
@@ -28,7 +27,6 @@
     service: notify.ios_Geoff
     data:
       message: "Smoke has cleared at home"
-
 
 
 - alias: Notify - Carbon monoxide detected
@@ -49,7 +47,6 @@
       message: "Carbon monoxide detected at home!!"
 
 
-
 - alias: Notify - Carbon monoxide cleared
   trigger:
     - platform: state
@@ -61,7 +58,6 @@
     service: notify.ios_Geoff
     data:
       message: "Carbon monoxide has cleared at home"
-
 
 
 - alias: Notify - Nest battery warning
@@ -82,7 +78,6 @@
       message: "Nest protect has a battery issue!"
 
 
-
 - alias: Notify - Nest battery ok
   trigger:
     - platform: state
@@ -94,7 +89,6 @@
     service: notify.ios_Geoff
     data:
       message: "Nest protect battery is now ok."
-
 
 
 - alias: Notify - Nest offline
@@ -110,7 +104,6 @@
       message: "A Nest device has gone offline."
 
 
-
 - alias: Notify - Nest online
   trigger:
     - platform: state
@@ -122,6 +115,4 @@
     service: notify.ios_Geoff
     data:
       message: "Nest device has reconnected."
-
-
 

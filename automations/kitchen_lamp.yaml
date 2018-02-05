@@ -8,7 +8,6 @@
     entity_id: light.kitchen_lamp
 
 
-
 - alias: Kitchen Lamp - Off at night
   trigger:
     platform: time

@@ -14,7 +14,6 @@
       entity_id: switch.heating
 
 
-
 - alias: Heating - Evenings
   trigger:
   - platform: time
@@ -29,7 +28,6 @@
     - delay: '03:00:00'
     - service: switch.turn_off
       entity_id: switch.heating
-
 
 
 - alias: Heating - Weekends
@@ -54,7 +52,6 @@
       entity_id: switch.heating
 
 
-
 - alias: Heating - Boost off
   trigger:
     - platform: state
@@ -63,7 +60,6 @@
   action:
     - service: switch.turn_off
       entity_id: switch.heating
-
 
 
 - alias: Heating - Boost on
@@ -79,3 +75,4 @@
       entity_id: switch.heating
     - service: input_boolean.turn_off
       entity_id: input_boolean.heating_boost
+
