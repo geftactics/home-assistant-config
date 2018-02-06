@@ -97,6 +97,11 @@ notify:
  - platform: ios
 
 
+recorder:
+  purge_interval: 2
+  purge_keep_days: 7
+
+
 sensor:
   - platform: metoffice
     api_key: !secret metoffice_api_key
