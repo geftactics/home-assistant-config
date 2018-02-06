@@ -64,7 +64,7 @@ light:
   - platform: flux_led
     devices:
       192.168.40.54:
-        name: bedroom_mirror
+        name: Bedroom Mirror
         protocol: 'ledenet'
         mode: "rgb"
   - platform: mqtt

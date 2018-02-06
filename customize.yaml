@@ -1,12 +1,20 @@
-light.bedroom_mirror:
-  friendly_name: Bedroom Mirror
-  emulated_hue_name: "Bedroom Mirror"
+switch.ellies_lamp:
+  icon: mdi:lightbulb
 
-sensor.cpu_used:
-  hidden: false
+switch.heating:
+  hidden: true
+  emulated_hue_hidden: true
 
-sensor.ram_used:
-  hidden: false
+binary_sensor.heating:
+  icon: mdi:fire
+
+input_boolean.heating_boost:
+  icon: mdi:camera-timer
+  emulated_hue_name: "Heating"
+
+binary_sensor.lounge_tv:
+  icon: mdi:monitor
+  device_class: power
 
 sensor.anguss_iphone_battery_level:
   hidden: true
@@ -25,24 +33,6 @@ sensor.gef_tactics_battery_level:
 
 sensor.gef_tactics_battery_state:
   hidden: true
-
-switch.ellies_lamp:
-  icon: mdi:lightbulb
-
-switch.heating:
-  hidden: true
-  emulated_hue_hidden: true
-
-binary_sensor.heating:
-  icon: mdi:fire
-
-input_boolean.heating_boost:
-  icon: mdi:camera-timer
-  emulated_hue_name: "Heating"
-
-binary_sensor.lounge_tv:
-  icon: mdi:monitor
-  device_class: power
 
 sensor.met_office_temperature:
   friendly_name: Outside Temperature
@@ -81,7 +71,3 @@ binary_sensor.downstairs_nest_protect_online:
 binary_sensor.upstairs_nest_protect_online:
   friendly_name: Upstairs Connection
   icon: mdi:lan-connect
-
-sensor.random_sensor:
-  friendly_name: Random Number
-  icon: mdi:comment-question-outline
