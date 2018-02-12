@@ -41,6 +41,7 @@ binary_sensor:
 emulated_hue:
   exposed_domains:
     - input_boolean
+    - light
     - switch
 
 

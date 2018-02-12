@@ -1,39 +1,59 @@
-- alias: Heating - Mornings
+- alias: Heating - Mornings On
   trigger:
-  - platform: time
-    at: '05:30:00'
+    - platform: time
+      at: '05:30:00'
   condition:
-  - condition: numeric_state
-    entity_id: sensor.met_office_temperature
-    below: '10'
+    - condition: numeric_state
+      entity_id: sensor.met_office_temperature
+      below: '10'
   action:
     - service: switch.turn_on
       entity_id: switch.heating
-    - delay: '02:00:00'
+
+
+- alias: Heating - Mornings Off
+  trigger:
+    - platform: time
+      at: '07:30:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.heating_boost
+      state: 'off'
+  action:
     - service: switch.turn_off
       entity_id: switch.heating
 
 
-- alias: Heating - Evenings
+- alias: Heating - Evenings On
   trigger:
-  - platform: time
-    at: '17:00:00'
+    - platform: time
+      at: '17:00:00'
   condition:
-  - condition: numeric_state
-    entity_id: sensor.met_office_temperature
-    below: '10'
+    - condition: numeric_state
+      entity_id: sensor.met_office_temperature
+      below: '10'
   action:
     - service: switch.turn_on
       entity_id: switch.heating
-    - delay: '03:00:00'
+
+
+- alias: Heating - Evenings Off
+  trigger:
+    - platform: time
+      at: '20:30:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.heating_boost
+      state: 'off'
+  action:
     - service: switch.turn_off
       entity_id: switch.heating
 
 
-- alias: Heating - Weekends
+- alias: Heating - Weekends On
   trigger:
-  - platform: time
-    at: '10:00:00'
+    - platform: time
+      at: '10:00:00'
   condition:
     condition: and
     conditions:
@@ -45,7 +65,24 @@
   action:
     - service: switch.turn_on
       entity_id: switch.heating
-    - delay: '05:00:00'
+
+
+- alias: Heating - Weekends Off
+  trigger:
+    - platform: time
+      at: '15:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.met_office_temperature
+        below: '10'
+      - condition: time
+        weekday: ['sat', 'sun']
+      - condition: state
+        entity_id: input_boolean.heating_boost
+        state: 'off'
+  action:
     - service: switch.turn_off
       entity_id: switch.heating
 
