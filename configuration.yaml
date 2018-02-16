@@ -25,7 +25,6 @@ ios:
 map:
 mqtt:
 sun:
-updater:
 
 
 binary_sensor:
@@ -36,6 +35,9 @@ binary_sensor:
     ports:
       4: Heating
     invert_logic: true
+  - platform: workday
+    country: UK
+    workdays: [ mon, tue, wed, thu, fri ]
 
 
 emulated_hue:

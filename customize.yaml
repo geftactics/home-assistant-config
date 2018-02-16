@@ -16,6 +16,9 @@ binary_sensor.lounge_tv:
   icon: mdi:monitor
   device_class: power
 
+binary_sensor.workday_sensor:
+  hidden: true
+
 sensor.anguss_iphone_battery_level:
   hidden: true
 

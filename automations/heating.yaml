@@ -60,8 +60,9 @@
       - condition: numeric_state
         entity_id: sensor.met_office_temperature
         below: '10'
-      - condition: time
-        weekday: ['sat', 'sun']
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'off'
   action:
     - service: switch.turn_on
       entity_id: switch.heating
@@ -77,8 +78,9 @@
       - condition: numeric_state
         entity_id: sensor.met_office_temperature
         below: '10'
-      - condition: time
-        weekday: ['sat', 'sun']
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'off'
       - condition: state
         entity_id: input_boolean.heating_boost
         state: 'off'
