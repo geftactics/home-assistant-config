@@ -4,3 +4,5 @@
 !scenes
 secrets.yaml
 known_devices.yaml
+!screenshot.jpg
+!README.md
