@@ -19,10 +19,13 @@ binary_sensor.lounge_tv:
 binary_sensor.workday_sensor:
   hidden: true
 
-sensor.anguss_iphone_battery_level:
+sensor.geoff_commute:
+  icon: mdi:car
+
+sensor.iphone_battery_level:
   hidden: true
 
-sensor.anguss_iphone_battery_state:
+sensor.iphone_battery_state:
   hidden: true
 
 sensor.lixs_iphone_battery_level:

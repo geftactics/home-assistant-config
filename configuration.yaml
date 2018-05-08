@@ -115,7 +115,13 @@ sensor:
     resources:
       - type: memory_use_percent
       - type: processor_use
-
+  - platform: google_travel_time
+    name: Geoff Commute
+    api_key: !secret google_api_key
+    origin: "40 St Helena Rd, Bradford BD6 1TB, UK | 53.745792, -1.734813 | 53.748695, -1.638881 | 53.784025, -1.568552"
+    destination: "LS2 8BT"
+    options:
+      units: imperial
 
 switch:
   - platform: tplink
