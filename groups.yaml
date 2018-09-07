@@ -40,6 +40,6 @@ data:
     - sun.sun
     - binary_sensor.lounge_tv
     - sensor.geoff_commute
-    - sensor.cpu_use_percent
-    - sensor.ram_use_percent
+    - sensor.processor_use
+    - sensor.memory_use_percent
     - history_graph.system_stats

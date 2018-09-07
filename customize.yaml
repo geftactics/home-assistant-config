@@ -40,6 +40,14 @@ sensor.gef_tactics_battery_level:
 sensor.gef_tactics_battery_state:
   hidden: true
 
+sensor.memory_use_percent:
+  friendly_name: Memory use
+  icon: mdi:chip
+
+sensor.processor_use:
+  friendly_name: Processor use
+  icon: mdi:memory
+
 sensor.met_office_temperature:
   friendly_name: Outside Temperature
 
@@ -48,11 +56,11 @@ sensor.met_office_weather:
 
 sensor.downstairs_nest_protect_battery_health:
   friendly_name: Downstairs Battery
-  icon: mdi:battery
+  icon: mdi:battery-outline
 
 sensor.upstairs_nest_protect_battery_health:
   friendly_name: Upstairs Battery
-  icon: mdi:battery
+  icon: mdi:battery-outline
 
 sensor.downstairs_nest_protect_co_status:
   friendly_name: Downstairs carbon monoxide
@@ -64,16 +72,30 @@ sensor.upstairs_nest_protect_co_status:
 
 sensor.downstairs_nest_protect_smoke_status:
   friendly_name: Downstairs Smoke
-  icon: mdi:amazon-clouddrive
+  icon: mdi:cloud-outline
 
 sensor.upstairs_nest_protect_smoke_status:
   friendly_name: Upstairs Smoke
-  icon: mdi:amazon-clouddrive
+  icon: mdi:cloud-outline
 
 binary_sensor.downstairs_nest_protect_online:
+  hidden: true
   friendly_name: Downstairs Connection
-  icon: mdi:lan-connect
+  icon: mdi:signal-variant
 
 binary_sensor.upstairs_nest_protect_online:
+  hidden: true
   friendly_name: Upstairs Connection
-  icon: mdi:lan-connect
+  icon: mdi:signal-variant
+
+sensor.upstairs_nest_protect_color_status:
+  hidden: true
+
+sensor.downstairs_nest_protect_color_status:
+  hidden: true
+
+sensor.st_helena_road_eta:
+  hidden: true
+
+binary_sensor.st_helena_road_away:
+  hidden: true

@@ -13,9 +13,7 @@ homeassistant:
 
 
 http:
-  api_password: !secret http_api_password
   base_url: dera.squiggle.org
-
 
 cloud:
 config:
@@ -51,8 +49,8 @@ history_graph:
   system:
     name: System Stats
     entities:
-      - sensor.cpu_used
-      - sensor.ram_used
+      - sensor.processor_use
+      - sensor.memory_use_percent
     hours_to_show: 24
     refresh: 60
 
@@ -94,14 +92,15 @@ logbook:
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
-
+  structure:
+    - St Helena Road
 
 notify:
  - platform: ios
 
 
 recorder:
-  purge_interval: 2
+  purge_interval: 1
   purge_keep_days: 7
 
 
@@ -115,13 +114,14 @@ sensor:
     resources:
       - type: memory_use_percent
       - type: processor_use
-  - platform: google_travel_time
+  - platform: waze_travel_time
+    origin: BD6 1TB
+    destination: LS2 8BT
+    region: 'EU'
     name: Geoff Commute
-    api_key: !secret google_api_key
-    origin: "40 St Helena Rd, Bradford BD6 1TB, UK | 53.745792, -1.734813 | 53.748695, -1.638881 | 53.784025, -1.568552"
-    destination: "LS2 8BT"
-    options:
-      units: imperial
+    incl_filter: M62
+    excl_filter: Stanningley
+
 
 switch:
   - platform: tplink
