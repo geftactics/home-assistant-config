@@ -1,3 +1,6 @@
+sensor.fritz_netmonitor:
+  hidden: true
+
 switch.ellies_lamp:
   icon: mdi:lightbulb
 

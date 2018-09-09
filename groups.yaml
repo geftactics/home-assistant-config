@@ -35,11 +35,18 @@ smoke_co:
     - binary_sensor.upstairs_nest_protect_online
 
 data:
-  name: Other Data
+  name: Other Info
   entities:
     - sun.sun
     - binary_sensor.lounge_tv
     - sensor.geoff_commute
+
+system_stats:
+  name: System Stats
+  entities:
+    - sensor.fritz_download
+    - sensor.fritz_upload
     - sensor.processor_use
     - sensor.memory_use_percent
     - history_graph.system_stats
+    -  history_graph.internet_bandwidth

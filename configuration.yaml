@@ -11,6 +11,8 @@ homeassistant:
       hidden: true
       initial_state: 'on'
 
+mqtt:
+    password: !secret api_password
 
 http:
   base_url: dera.squiggle.org
@@ -21,7 +23,6 @@ frontend:
 history:
 ios:
 map:
-mqtt:
 sun:
 
 
@@ -51,6 +52,13 @@ history_graph:
     entities:
       - sensor.processor_use
       - sensor.memory_use_percent
+    hours_to_show: 12
+    refresh: 60
+  internet:
+    name: Internet Bandwidth
+    entities:
+      - sensor.fritz_download
+      - sensor.fritz_upload
     hours_to_show: 24
     refresh: 60
 
@@ -121,7 +129,19 @@ sensor:
     name: Geoff Commute
     incl_filter: M62
     excl_filter: Stanningley
-
+  - platform: fritzbox_netmonitor
+  - platform: template
+    sensors:
+       fritz_upload:
+          friendly_name: "Upload"
+          unit_of_measurement: 'Mbps'
+          icon_template: mdi:upload
+          value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_up | float * 8 / 1000000) | round(1) }}"
+       fritz_download:
+          friendly_name: "Download"
+          unit_of_measurement: 'Mbps'
+          icon_template: mdi:download
+          value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) | round(1) }}"
 
 switch:
   - platform: tplink
