@@ -133,15 +133,32 @@ sensor:
   - platform: template
     sensors:
        fritz_upload:
-          friendly_name: "Upload"
-          unit_of_measurement: 'Mbps'
+          friendly_name: Upload
+          unit_of_measurement: Mbps
           icon_template: mdi:upload
           value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_up | float * 8 / 1000000) | round(1) }}"
        fritz_download:
-          friendly_name: "Download"
-          unit_of_measurement: 'Mbps'
+          friendly_name: Download
+          unit_of_measurement: Mbps
           icon_template: mdi:download
           value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) | round(1) }}"
+       waste_collection:
+          friendly_name: Waste Collection
+          value_template: >
+            {% if ((now().isocalendar()[1]|int) % 2) == 0 %}
+              {% if (now().isoweekday()|int) > 5 %}
+                Recycling
+              {% else %}
+                General
+              {% endif %}
+            {% else %}
+              {% if (now().isoweekday()|int) > 5 %}
+                General
+              {% else %}
+                Recycling
+              {% endif %}
+            {% endif %}
+
 
 switch:
   - platform: tplink

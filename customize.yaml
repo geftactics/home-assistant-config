@@ -1,3 +1,6 @@
+sensor.waste_collection:
+  icon: mdi:delete
+
 sensor.fritz_netmonitor:
   hidden: true
 

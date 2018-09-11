@@ -15,6 +15,14 @@ lighting:
     - switch.ellies_lamp
     - light.bedroom_mirror
 
+data:
+  name: Other Info
+  entities:
+    - sun.sun
+    - binary_sensor.lounge_tv
+    - sensor.geoff_commute
+    - sensor.waste_collection
+
 family:
   name: Family
   entities:
@@ -33,13 +41,6 @@ smoke_co:
     - sensor.upstairs_nest_protect_battery_health
     - binary_sensor.downstairs_nest_protect_online
     - binary_sensor.upstairs_nest_protect_online
-
-data:
-  name: Other Info
-  entities:
-    - sun.sun
-    - binary_sensor.lounge_tv
-    - sensor.geoff_commute
 
 system_stats:
   name: System Stats
