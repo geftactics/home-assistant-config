@@ -49,5 +49,5 @@ system_stats:
     - sensor.fritz_upload
     - sensor.processor_use
     - sensor.memory_use_percent
+    - history_graph.internet_bandwidth
     - history_graph.system_stats
-    -  history_graph.internet_bandwidth

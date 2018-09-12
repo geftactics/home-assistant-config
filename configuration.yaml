@@ -15,6 +15,7 @@ mqtt:
     password: !secret api_password
 
 http:
+  api_password: !secret api_password
   base_url: dera.squiggle.org
 
 cloud:
@@ -74,10 +75,10 @@ light:
     devices:
       192.168.40.54:
         name: Bedroom Mirror
-        protocol: 'ledenet'
-        mode: "rgb"
+        protocol: ledenet
+        mode: rgb
   - platform: mqtt
-    name: "Kitchen Lamp"
+    name: Kitchen Lamp
     command_topic: "cmnd/kitchen/POWER"
     state_topic: "stat/kitchen/POWER"
     qos: 1
@@ -143,7 +144,7 @@ sensor:
           icon_template: mdi:download
           value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) | round(1) }}"
        waste_collection:
-          friendly_name: Waste Collection
+          friendly_name: Next Waste Collection
           value_template: >
             {% if ((now().isocalendar()[1]|int) % 2) == 0 %}
               {% if (now().isoweekday()|int) > 5 %}
