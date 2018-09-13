@@ -5,7 +5,7 @@
   condition:
     - condition: numeric_state
       entity_id: sensor.met_office_temperature
-      below: '8'
+      below: '11'
   action:
     - service: switch.turn_on
       entity_id: switch.heating
