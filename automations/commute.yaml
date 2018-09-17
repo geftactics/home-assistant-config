@@ -1,4 +1,4 @@
-- alias: Notify - Geoff Commute
+- alias: Notify - Geoff Commute Time
   trigger:
     - platform: time
       at: '07:20:00'
@@ -14,4 +14,22 @@
   action:
     service: notify.ios_Geoff
     data:
-      message: "Commute time is currently {{ states.sensor.geoff_commute.state }} minutes. ({{ states.sensor.geoff_commute.attributes.distance }})"
+      message: "Commute time is currently {{ states.sensor.geoff_commute.state }} minutes."
+
+
+- alias: Notify - Geoff Commute Route
+  trigger:
+    - platform: time
+      at: '07:20:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ sensor.geoff_commute.attributes.route != 'M62 (E); M621 (E)' }}"
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
+  action:
+    service: notify.ios_Geoff
+    data:
+      message: "Commute route suggested is {{ states.sensor.geoff_commute.attributes.route }} "
