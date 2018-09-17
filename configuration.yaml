@@ -15,7 +15,7 @@ zone:
   - name: Home
     latitude: 53.76706
     longitude: -1.78070
-    radius: 400
+    radius: 500
     icon: mdi:home
 
 mqtt:

@@ -1,10 +1,10 @@
 - alias: Notify - Waste Collection
   trigger:
     - platform: time
-      at: '19:50:00'
+      at: '07:16:00'
   condition:
     condition: time
-    weekday: wed
+    weekday: fri
   action:
     - service: notify.ios_Geoff
       data:
