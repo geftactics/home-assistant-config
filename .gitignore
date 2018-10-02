@@ -2,6 +2,7 @@
 !*.yaml
 !automations
 !scenes
+!www/**
 !www
 secrets.yaml
 entity_registry.yaml
