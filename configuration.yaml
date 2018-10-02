@@ -22,7 +22,7 @@ mqtt:
     password: !secret api_password
 
 http:
-  api_password: !secret api_password
+#  api_password: !secret api_password
   base_url: dera.squiggle.org
 
 cloud:
@@ -32,7 +32,7 @@ history:
 ios:
 map:
 sun:
-
+zeroconf:
 
 binary_sensor:
   - platform: ping
