@@ -103,6 +103,7 @@ logbook:
       - group.heating
       - group.lighting
       - group.smoke_co
+      - switch.heating_relight
 
 
 nest:
