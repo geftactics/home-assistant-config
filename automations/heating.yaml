@@ -123,3 +123,23 @@
     - delay: '00:00:01'
     - service: switch.turn_off
       entity_id: switch.heating_relight
+
+
+- alias: Heating - Relight Hourly
+  trigger:
+    platform: time
+    minutes: 5
+    seconds: 00
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - condition: time
+      after: '05:00:00'
+      before: '20:00:00'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.heating_relight
+    - delay: '00:00:01'
+    - service: switch.turn_off
+      entity_id: switch.heating_relight

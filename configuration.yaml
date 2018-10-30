@@ -145,12 +145,22 @@ sensor:
           friendly_name: Upload
           unit_of_measurement: Mbps
           icon_template: mdi:upload
-          value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_up | float * 8 / 1000000) | round(1) }}"
+          value_template: >
+            {% if (states.sensor.fritz_netmonitor.attributes.transmission_rate_up | float * 8 / 1000000) >= 0 %}
+              {{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_up | float * 8 / 1000000) | round(1) }}
+            {% else %}
+              NaN
+            {% endif %}
        fritz_download:
           friendly_name: Download
           unit_of_measurement: Mbps
           icon_template: mdi:download
-          value_template: "{{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) | round(1) }}"
+          value_template: >
+            {% if (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) >= 0 %}
+              {{ (states.sensor.fritz_netmonitor.attributes.transmission_rate_down | float * 8 / 1000000) | round(1) }}
+            {% else %}
+              NaN
+            {% endif %}
        waste_collection:
           friendly_name: Next Waste Collection
           value_template: >
