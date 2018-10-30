@@ -4,6 +4,7 @@ heating:
   entities:
     - binary_sensor.heating
     - input_boolean.heating_boost
+    - switch.heating_relight
     - sensor.met_office_temperature
     - sensor.met_office_weather
     - input_number.heating_trigger

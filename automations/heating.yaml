@@ -113,3 +113,15 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.heating_boost
 
+
+- alias: Heating - Relight
+  trigger:
+    - platform: state
+      to: 'on'
+      entity_id: switch.heating_relight
+  action:
+    - service: switch.turn_on
+      entity_id: switch.heating_relight
+    - delay: '00:00:01'
+    - service: switch.turn_off
+      entity_id: switch.heating_relight

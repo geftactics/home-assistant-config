@@ -11,6 +11,10 @@ switch.heating:
   hidden: true
   emulated_hue_hidden: true
 
+switch.heating_relight:
+  friendly_name: Re-light
+  emulated_hue_hidden: true
+
 binary_sensor.heating:
   icon: mdi:fire
 

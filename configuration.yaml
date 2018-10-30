@@ -22,7 +22,7 @@ mqtt:
     password: !secret api_password
 
 http:
-#  api_password: !secret api_password
+  api_password: !secret api_password
   base_url: dera.squiggle.org
 
 cloud:
@@ -175,6 +175,7 @@ switch:
   - platform: rpi_gpio
     ports:
       4: Heating
+      17: Heating Relight
     invert_logic: true
 
 
