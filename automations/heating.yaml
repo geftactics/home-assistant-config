@@ -120,8 +120,6 @@
       to: 'on'
       entity_id: switch.heating_relight
   action:
-    - service: switch.turn_on
-      entity_id: switch.heating_relight
     - delay: '00:00:01'
     - service: switch.turn_off
       entity_id: switch.heating_relight
