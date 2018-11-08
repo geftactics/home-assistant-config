@@ -8,7 +8,7 @@ homeassistant:
   customize: !include customize.yaml
   customize_domain:
     automation:
-      hidden: true
+      hidden: false
       initial_state: 'on'
 
 zone:

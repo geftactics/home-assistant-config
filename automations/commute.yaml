@@ -1,13 +1,13 @@
 - alias: Notify - Geoff Commute Time
   trigger:
     - platform: time
-      at: '07:20:00'
+      at: '07:25:00'
   condition:
     condition: and
     conditions:
       - condition: numeric_state
         entity_id: sensor.geoff_commute
-        above: '15'
+        above: '39'
       - condition: state
         entity_id: binary_sensor.workday_sensor
         state: 'on'
@@ -19,16 +19,19 @@
 
 - alias: Notify - Geoff Commute Route
   trigger:
-    - platform: time
-      at: '07:20:00'
+    platform: state
+    entity_id: sensor.geoff_commute
   condition:
     condition: and
     conditions:
       - condition: template
-        value_template: "{{ sensor.geoff_commute.attributes.route != 'M62 (E); M621 (E)' }}"
+        value_template: "{{ states.sensor.geoff_commute.attributes.route != 'M62 (E); M621 (E)' }}"
       - condition: state
         entity_id: binary_sensor.workday_sensor
         state: 'on'
+#      - condition: time
+#        after: '07:00:00'
+#        before: '08:00:00'
   action:
     service: notify.ios_Geoff
     data:
