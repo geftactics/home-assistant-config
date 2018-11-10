@@ -1,3 +1,5 @@
+# Home Assistant customize file
+
 sensor.waste_collection:
   icon: mdi:delete
 

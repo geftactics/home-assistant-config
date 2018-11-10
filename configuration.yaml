@@ -1,3 +1,5 @@
+# Home-assistant main config file
+
 homeassistant:
   name: St Helena Rd
   latitude: 53.76706
