@@ -29,7 +29,7 @@ family:
   entities:
     - device_tracker.geoff
     - device_tracker.lix
-    - device_tracker.angus
+    - device_tracker.iphone
 
 smoke_co:
   name: CO & Smoke

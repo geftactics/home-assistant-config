@@ -16,11 +16,10 @@ lix:
   track: true
   vendor:
 
-angus:
+iphone:
   hide_if_away: false
   icon:
   mac:
   name: Angus
   picture: /local/angus.jpg
   track: true
-  vendor:
