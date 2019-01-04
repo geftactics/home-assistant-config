@@ -1,3 +1,13 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - group.heating
+#    - group.lighting
+#    - group.family
+#    - group.data
+#    - group.smoke_co
+#    - media_player.living_room_tv
+
 heating:
   name: Heating
   control: hidden
@@ -6,7 +16,6 @@ heating:
     - input_boolean.heating_boost
     - switch.heating_relight
     - sensor.met_office_temperature
-    - sensor.met_office_weather
     - input_number.heating_trigger
 
 lighting:
@@ -20,7 +29,7 @@ data:
   name: Other Info
   entities:
     - sun.sun
-    - binary_sensor.lounge_tv
+    - sensor.met_office_weather
     - sensor.geoff_commute
     - sensor.waste_collection
 
@@ -52,3 +61,9 @@ system_stats:
     - sensor.memory_use_percent
     - history_graph.internet_bandwidth
     - history_graph.system_stats
+
+media:
+  name: Media
+  entities:
+    -  media_player.living_room_tv
+

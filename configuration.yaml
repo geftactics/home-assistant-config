@@ -37,9 +37,6 @@ sun:
 zeroconf:
 
 binary_sensor:
-  - platform: ping
-    host: 192.168.40.33
-    name: Lounge TV
   - platform: rpi_gpio
     ports:
       4: Heating
@@ -72,6 +69,17 @@ history_graph:
     hours_to_show: 24
     refresh: 60
 
+
+homekit:
+  safe_mode: True
+  filter:
+    include_domains:
+      - input_boolean
+      - light
+      - switch
+  entity_config:
+    input_boolean.heating_boost:
+      name: Heating
 
 input_boolean:
   heating_boost:
@@ -107,6 +115,13 @@ logbook:
       - group.smoke_co
       - switch.heating_relight
 
+media_player:
+  - platform: firetv
+    name: Living Room TV
+    host: 192.168.40.35
+    adbkey: "/home/homeassistant/.homeassistant/config/firetv/adbkey"
+    get_source: false
+    get_sources: false
 
 nest:
   client_id: !secret nest_client_id

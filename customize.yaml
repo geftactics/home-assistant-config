@@ -24,10 +24,6 @@ input_boolean.heating_boost:
   icon: mdi:camera-timer
   emulated_hue_name: "Heating"
 
-binary_sensor.lounge_tv:
-  icon: mdi:monitor
-  device_class: power
-
 binary_sensor.workday_sensor:
   hidden: true
 
