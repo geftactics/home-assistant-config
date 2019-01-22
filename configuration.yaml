@@ -24,7 +24,7 @@ mqtt:
     password: !secret api_password
 
 http:
-  api_password: !secret api_password
+  #api_password: !secret api_password
   base_url: dera.squiggle.org
 
 cloud:
@@ -180,6 +180,7 @@ sensor:
             {% endif %}
        waste_collection:
           friendly_name: Next Waste Collection
+          entity_id: sensor.waste_collection
           value_template: >
             {% if ((now().isocalendar()[1]|int) % 2) == 0 %}
               {% if (now().isoweekday()|int) > 5 %}
@@ -205,6 +206,10 @@ switch:
       4: Heating
       17: Heating Relight
     invert_logic: true
+
+
+tradfri:
+  host: 192.168.40.42
 
 
 group: !include groups.yaml

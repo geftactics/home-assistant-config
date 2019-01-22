@@ -1,5 +1,8 @@
 # Home Assistant customize file
 
+sensor.tradfri_wireless_dimmer:
+  hidden: true
+
 sensor.waste_collection:
   icon: mdi:delete
 
