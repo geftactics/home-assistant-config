@@ -16,13 +16,13 @@ heating:
     - input_boolean.heating_boost
     - switch.heating_relight
     - sensor.met_office_temperature
-    - input_number.heating_trigger
 
 lighting:
   name: Lighting
   entities:
     - light.kitchen_lamp
     - switch.ellies_lamp
+    - light.upstairs_light
     - light.bedroom_mirror
 
 data:

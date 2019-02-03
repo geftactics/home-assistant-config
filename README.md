@@ -5,13 +5,14 @@ Components include:
 * Nest Protect (Smoke and Carbon monoxide detectors)
 * TP-Link Smart Plugs
 * Sonoff ESP8266 switches
-* Samsung TV
+* Amazon FireTV
 * Central heating (via Raspberry Pi GPIO controlled relay board)
 * Met Office (Temperature and weather)
 * Presence Detection (Home Assistant iOS app)
 * Fritz Router (Internet usage graphs)
 * Waze/Google-Maps (For high commute time warnings)
 * Custom sensors (General or recyclying waste collection)
+* Ikea Tradfri gateway
 
 Looks a bit like this:
 ![home assistant](https://raw.githubusercontent.com/squiggleuk/home-assistant-config/master/screenshot.jpg)

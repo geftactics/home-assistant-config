@@ -11,7 +11,7 @@
         - sensor.downstairs_nest_protect_smoke_status
         - sensor.upstairs_nest_protect_smoke_status
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Smoke detected at home!!"
 
@@ -24,7 +24,7 @@
         - sensor.downstairs_nest_protect_smoke_status
         - sensor.upstairs_nest_protect_smoke_status
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Smoke has cleared at home"
 
@@ -42,7 +42,7 @@
         - sensor.downstairs_nest_protect_co_status
         - sensor.upstairs_nest_protect_co_status
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Carbon monoxide detected at home!!"
 
@@ -55,7 +55,7 @@
         - sensor.downstairs_nest_protect_co_status
         - sensor.upstairs_nest_protect_co_status
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Carbon monoxide has cleared at home"
 
@@ -73,7 +73,7 @@
         - sensor.downstairs_nest_protect_battery_health
         - sensor.upstairs_nest_protect_battery_health
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Nest protect has a battery issue!"
 
@@ -86,7 +86,7 @@
         - sensor.downstairs_nest_protect_battery_health
         - sensor.upstairs_nest_protect_battery_health
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Nest protect battery is now ok."
 
@@ -99,7 +99,7 @@
         - binary_sensor.downstairs_nest_protect_online
         - binary_sensor.upstairs_nest_protect_online
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "A Nest device has gone offline."
 
@@ -112,7 +112,7 @@
         - binary_sensor.downstairs_nest_protect_online
         - binary_sensor.upstairs_nest_protect_online
   action:
-    service: notify.ios_Geoff
+    service: notify.ios_geoff
     data:
       message: "Nest device has reconnected."
 

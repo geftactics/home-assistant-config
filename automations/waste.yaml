@@ -6,7 +6,7 @@
     condition: time
     weekday: fri
   action:
-    - service: notify.ios_Geoff
+    - service: notify.ios_geoff
       data:
         message: "{{ states.sensor.waste_collection.state }} waste collection is today!"
     - service: notify.ios_lix

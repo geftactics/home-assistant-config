@@ -81,6 +81,7 @@ homekit:
     input_boolean.heating_boost:
       name: Heating
 
+
 input_boolean:
   heating_boost:
     name: Boost
@@ -107,8 +108,8 @@ light:
 logbook:
   exclude:
     entities:
-      - automation.heating__boost_on
-      - automation.heating__boost_off
+      - automation.heating_boost_on
+      - automation.heating_boost_off
       - group.data
       - group.heating
       - group.lighting
@@ -180,7 +181,7 @@ sensor:
             {% endif %}
        waste_collection:
           friendly_name: Next Waste Collection
-          entity_id: sensor.waste_collection
+          entity_id: sun.sun
           value_template: >
             {% if ((now().isocalendar()[1]|int) % 2) == 0 %}
               {% if (now().isoweekday()|int) > 5 %}
