@@ -1,0 +1,139 @@
+{
+    "data": {
+        "config": {
+            "title": "St Helena Rd",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "binary_sensor.heating",
+                                "input_boolean.heating_boost",
+                                "switch.heating_relight",
+                                "sensor.met_office_temperature"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Heating",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.kitchen_lamp",
+                                "switch.ellies_lamp",
+                                "light.upstairs_light",
+                                "light.bedroom_mirror"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "Lighting",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "device_tracker.geoff",
+                                "device_tracker.lix",
+                                "device_tracker.iphone"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Family",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sun.sun",
+                                "sensor.met_office_weather",
+                                "sensor.geoff_commute",
+                                "sensor.waste_collection"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Other Info",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.downstairs_nest_protect_smoke_status"
+                                },
+                                {
+                                    "entity": "sensor.upstairs_nest_protect_smoke_status"
+                                },
+                                {
+                                    "entity": "sensor.downstairs_nest_protect_co_status"
+                                },
+                                {
+                                    "entity": "sensor.upstairs_nest_protect_co_status"
+                                },
+                                {
+                                    "entity": "sensor.downstairs_nest_protect_battery_health"
+                                },
+                                {
+                                    "entity": "sensor.upstairs_nest_protect_battery_health"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "CO & Smoke",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fritz_download"
+                                },
+                                {
+                                    "entity": "sensor.fritz_upload"
+                                },
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "System Stats",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.living_room_tv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fritz_download",
+                                    "name": "Downstream"
+                                },
+                                {
+                                    "entity": "sensor.fritz_upload",
+                                    "name": "Upstream"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "title": "Internet Bandwidth",
+                            "type": "history-graph"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.memory_use_percent",
+                                    "name": "Memory"
+                                },
+                                {
+                                    "entity": "sensor.processor_use",
+                                    "name": "CPU"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "title": "System Stats",
+                            "type": "history-graph"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
