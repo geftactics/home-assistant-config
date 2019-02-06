@@ -8,3 +8,4 @@ secrets.yaml
 entity_registry.yaml
 !screenshot.jpg
 !README.md
+!storage/lovelace
