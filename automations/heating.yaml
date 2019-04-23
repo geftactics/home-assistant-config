@@ -14,7 +14,7 @@
 - alias: Heating - Mornings Off
   trigger:
     - platform: time
-      at: '07:30:00'
+      at: '07:00:00'
   condition:
     - condition: state
       entity_id: input_boolean.heating_boost
