@@ -115,14 +115,16 @@ logbook:
       - group.lighting
       - group.smoke_co
       - switch.heating_relight
+      - sensor.met_office_weather
+      - automation.heating_relight_hourly
 
-media_player:
-  - platform: firetv
-    name: Living Room TV
-    host: 192.168.40.35
-    adbkey: "/home/homeassistant/.homeassistant/config/firetv/adbkey"
-    get_source: false
-    get_sources: false
+#media_player:
+#  - platform: firetv
+#    name: Living Room TV
+#    host: 192.168.40.35
+#    adbkey: "/home/homeassistant/.homeassistant/config/firetv/adbkey"
+#    get_source: false
+#    get_sources: false
 
 nest:
   client_id: !secret nest_client_id

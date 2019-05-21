@@ -1,8 +1,7 @@
-- alias: Ellies Lamp - On at sunset
+- alias: Ellies Lamp - On at bedtime
   trigger:
-    platform: sun
-    event: sunset
-    offset: "-00:00:00"
+    platform: time
+    at: "20:00:00"
   action:
     service: switch.turn_on
     entity_id: switch.ellies_lamp
