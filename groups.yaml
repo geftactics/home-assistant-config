@@ -37,7 +37,7 @@ family:
   name: Family
   entities:
     - device_tracker.geoff
-    - device_tracker.lix
+    - device_tracker.lixs_iphone
     - device_tracker.iphone
 
 smoke_co:

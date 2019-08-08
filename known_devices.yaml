@@ -7,11 +7,11 @@ geoff:
   track: true
   vendor:
 
-lix:
+lixs_iphone:
   hide_if_away: false
   icon:
   mac:
-  name: Lix
+  name: Lix’s iPhone
   picture: /local/lix.jpg
   track: true
   vendor:
@@ -23,3 +23,4 @@ iphone:
   name: Angus
   picture: /local/angus.jpg
   track: true
+

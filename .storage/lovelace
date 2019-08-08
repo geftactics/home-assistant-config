@@ -30,9 +30,15 @@
                         },
                         {
                             "entities": [
-                                "device_tracker.geoff",
-                                "device_tracker.lix",
-                                "device_tracker.iphone"
+                                {
+                                    "entity": "device_tracker.geoff"
+                                },
+                                {
+                                    "entity": "device_tracker.lixs_iphone"
+                                },
+                                {
+                                    "entity": "device_tracker.iphone"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Family",
