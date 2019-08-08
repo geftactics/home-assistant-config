@@ -11,7 +11,7 @@ lixs_iphone:
   hide_if_away: false
   icon:
   mac:
-  name: Lix’s iPhone
+  name: Lix
   picture: /local/lix.jpg
   track: true
   vendor:
