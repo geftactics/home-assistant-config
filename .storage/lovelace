@@ -19,10 +19,18 @@
                         },
                         {
                             "entities": [
-                                "light.kitchen_lamp",
-                                "switch.ellies_lamp",
-                                "light.upstairs_light",
-                                "light.bedroom_mirror"
+                                {
+                                    "entity": "light.kitchen_lamp"
+                                },
+                                {
+                                    "entity": "switch.ellies_lamp"
+                                },
+                                {
+                                    "entity": "light.upstairs_light"
+                                },
+                                {
+                                    "entity": "light.bedroom_mirror"
+                                }
                             ],
                             "show_header_toggle": true,
                             "title": "Lighting",

@@ -27,7 +27,7 @@ http:
   #api_password: !secret api_password
   base_url: dera.squiggle.org
 
-cloud:
+#cloud:
 config:
 frontend:
 history:
@@ -46,7 +46,18 @@ binary_sensor:
     workdays: [ mon, tue, wed, thu, fri ]
 
 
+calendar:
+  - platform: caldav
+    url: https://caldav.icloud.com 
+    username: !secret icloud_username
+    password: !secret icloud_app_specific_password
+    calendars:
+      - 'Calendar'
+
+
 emulated_hue:
+  host_ip: 192.168.40.80
+  listen_port: 8300
   exposed_domains:
     - input_boolean
     - light
@@ -152,12 +163,12 @@ sensor:
       - type: memory_use_percent
       - type: processor_use
   - platform: waze_travel_time
-    origin: BD6 1TB
-    destination: LS2 8BT
+    origin: 53.768413, -1.749178
+    destination: Merrion Way Leeds, UK
     region: 'EU'
     name: Geoff Commute
-    incl_filter: M62
-    excl_filter: Stanningley
+    #incl_filter: M62
+    #excl_filter: Stanningley
   - platform: fritzbox_netmonitor
   - platform: template
     sensors:
@@ -201,15 +212,16 @@ sensor:
 
 
 switch:
-  - platform: tplink
-    host: 192.168.40.6
-    name: "Ellies Lamp"
   - platform: rpi_gpio
     ports:
       4: Heating
       17: Heating Relight
     invert_logic: true
 
+tplink:
+  discovery: false
+  switch:
+    - host: 192.168.40.6
 
 tradfri:
   host: 192.168.40.42

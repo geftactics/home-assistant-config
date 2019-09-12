@@ -18,7 +18,7 @@ switch.heating:
 
 switch.heating_relight:
   friendly_name: Re-light
-  emulated_hue_hidden: true
+  emulated_hue_name: "relight"
 
 binary_sensor.heating:
   icon: mdi:fire
@@ -39,10 +39,10 @@ sensor.iphone_battery_level:
 sensor.iphone_battery_state:
   hidden: true
 
-sensor.lixs_iphone_battery_level:
+sensor.lixs_iphone_battery_level_2:
   hidden: true
 
-sensor.lixs_iphone_battery_state:
+sensor.lixs_iphone_battery_state_2:
   hidden: true
 
 sensor.gef_tactics_battery_level:
