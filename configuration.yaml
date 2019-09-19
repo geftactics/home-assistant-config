@@ -163,11 +163,11 @@ sensor:
       - type: memory_use_percent
       - type: processor_use
   - platform: waze_travel_time
-    origin: 53.768413, -1.749178
-    destination: Merrion Way Leeds, UK
+    origin: 53.766130, -1.780688
+    destination: 53.802496, -1.543237
     region: 'EU'
     name: Geoff Commute
-    #incl_filter: M62
+    incl_filter: M62
     #excl_filter: Stanningley
   - platform: fritzbox_netmonitor
   - platform: template
