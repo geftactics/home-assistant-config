@@ -1,7 +1,7 @@
 - alias: Notify - Geoff Commute Time
   trigger:
     - platform: time
-      at: '07:25:00'
+      at: '07:30:00'
   condition:
     condition: and
     conditions:

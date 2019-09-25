@@ -36,6 +36,27 @@ map:
 sun:
 zeroconf:
 
+api:
+
+alexa:
+  smart_home:
+    filter:
+      exclude_domains:
+        - automation
+        - binary_sensor
+        - group
+        - sensor
+      exclude_entities:
+        - switch.heating
+    entity_config:
+      input_boolean.heating_boost:
+        name: Heating
+      switch.ellies_lamp:
+        display_categories: LIGHT
+      switch.heating_relight:
+        display_categories: OTHER
+
+
 binary_sensor:
   - platform: rpi_gpio
     ports:

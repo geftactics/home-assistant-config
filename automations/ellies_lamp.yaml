@@ -1,9 +1,18 @@
 - alias: Ellies Lamp - On at bedtime
   trigger:
     platform: time
-    at: "20:00:00"
+    at: "19:30:00"
   action:
     service: switch.turn_on
+    entity_id: switch.ellies_lamp
+
+
+- alias: Ellies Lamp - Off at night
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    service: switch.turn_off
     entity_id: switch.ellies_lamp
 
 

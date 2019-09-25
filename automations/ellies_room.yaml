@@ -1,9 +1,18 @@
 - alias: Ellies Room - On at bedtime
   trigger:
     platform: time
-    at: "20:00:00"
+    at: "19:30:00"
   action:
     service: homeassistant.turn_on
+    entity_id: light.upstairs_light
+
+
+- alias: Ellies Room - Off in the night
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    service: homeassistant.turn_off
     entity_id: light.upstairs_light
 
 
@@ -14,3 +23,4 @@
   action:
     service: homeassistant.turn_off
     entity_id: light.upstairs_light
+
