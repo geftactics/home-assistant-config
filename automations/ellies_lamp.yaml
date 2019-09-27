@@ -10,7 +10,7 @@
 - alias: Ellies Lamp - Off at night
   trigger:
     platform: time
-    at: '21:00:00'
+    at: '22:12'
   action:
     service: switch.turn_off
     entity_id: switch.ellies_lamp

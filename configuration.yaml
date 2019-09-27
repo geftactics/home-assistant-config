@@ -34,6 +34,7 @@ history:
 ios:
 map:
 sun:
+system_health:
 zeroconf:
 
 api:
@@ -76,13 +77,13 @@ calendar:
       - 'Calendar'
 
 
-emulated_hue:
-  host_ip: 192.168.40.80
-  listen_port: 8300
-  exposed_domains:
-    - input_boolean
-    - light
-    - switch
+#emulated_hue:
+#  host_ip: 192.168.40.80
+#  listen_port: 8300
+#  exposed_domains:
+#    - input_boolean
+#    - light
+#    - switch
 
 
 history_graph:
