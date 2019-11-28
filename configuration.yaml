@@ -25,6 +25,7 @@ lovelace:
 
 mqtt:
     password: !secret api_password
+    discovery: true
 
 api:
 config:

@@ -1,5 +1,13 @@
 # Home Assistant customize file
 
+device_tracker.gef_tactics:
+  friendly_name: Geoff
+  entity_picture: /local/geoff.jpg
+
+device_tracker.lixs_iphone:
+  friendly_name: Lix
+  entity_picture: /local/lix.jpg
+
 switch.ellies_lamp:
   icon: mdi:lightbulb
 
