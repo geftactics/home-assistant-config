@@ -1,20 +1,7 @@
 # Home Assistant customize file
 
-sensor.tradfri_wireless_dimmer:
-  hidden: true
-
-sensor.waste_collection:
-  icon: mdi:delete
-
-sensor.fritz_netmonitor:
-  hidden: true
-
 switch.ellies_lamp:
   icon: mdi:lightbulb
-
-switch.heating:
-  hidden: true
-  emulated_hue_hidden: true
 
 switch.heating_relight:
   friendly_name: Re-light
@@ -27,29 +14,8 @@ input_boolean.heating_boost:
   icon: mdi:camera-timer
   emulated_hue_name: "Heating"
 
-binary_sensor.workday_sensor:
-  hidden: true
-
 sensor.geoff_commute:
   icon: mdi:car
-
-sensor.iphone_battery_level:
-  hidden: true
-
-sensor.iphone_battery_state:
-  hidden: true
-
-sensor.lixs_iphone_battery_level_2:
-  hidden: true
-
-sensor.lixs_iphone_battery_state_2:
-  hidden: true
-
-sensor.gef_tactics_battery_level:
-  hidden: true
-
-sensor.gef_tactics_battery_state:
-  hidden: true
 
 sensor.memory_use_percent:
   friendly_name: Memory use
@@ -90,23 +56,9 @@ sensor.upstairs_nest_protect_smoke_status:
   icon: mdi:cloud-outline
 
 binary_sensor.downstairs_nest_protect_online:
-  hidden: true
   friendly_name: Downstairs Connection
   icon: mdi:signal-variant
 
 binary_sensor.upstairs_nest_protect_online:
-  hidden: true
   friendly_name: Upstairs Connection
   icon: mdi:signal-variant
-
-sensor.upstairs_nest_protect_color_status:
-  hidden: true
-
-sensor.downstairs_nest_protect_color_status:
-  hidden: true
-
-sensor.st_helena_road_eta:
-  hidden: true
-
-binary_sensor.st_helena_road_away:
-  hidden: true

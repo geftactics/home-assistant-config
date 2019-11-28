@@ -12,27 +12,6 @@
         entity_id: binary_sensor.workday_sensor
         state: 'on'
   action:
-    service: notify.ios_geoff
+    service: notify.mobile_app_gef_tactics
     data:
       message: "Commute time is currently {{ states.sensor.geoff_commute.state }} minutes."
-
-
-#- alias: Notify - Geoff Commute Route
-#  trigger:
-#    platform: state
-#    entity_id: sensor.geoff_commute
-#  condition:
-#    condition: and
-#    conditions:
-#      - condition: template
-#        value_template: "{{ states.sensor.geoff_commute.attributes.route != 'M62 (E); M621 (E)' }}"
-#      - condition: state
-#        entity_id: binary_sensor.workday_sensor
-#        state: 'on'
-#      - condition: time
-#        after: '07:00:00'
-#        before: '08:00:00'
-#  action:
-#    service: notify.ios_geoff
-#    data:
-#      message: "Commute route suggested is {{ states.sensor.geoff_commute.attributes.route }} "

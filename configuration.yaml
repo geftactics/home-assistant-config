@@ -8,10 +8,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/London
   customize: !include customize.yaml
-  customize_domain:
-    automation:
-      hidden: true
-      initial_state: 'on'
 
 zone:
   - name: Home
@@ -20,24 +16,28 @@ zone:
     radius: 200
     icon: mdi:home
 
-mqtt:
-    password: !secret api_password
-
 http:
   #api_password: !secret api_password
   base_url: dera.squiggle.org
 
-#cloud:
+lovelace:
+  mode: yaml
+
+mqtt:
+    password: !secret api_password
+
+api:
 config:
+discovery:
 frontend:
 history:
 ios:
 map:
+mobile_app:
 sun:
 system_health:
 zeroconf:
 
-api:
 
 alexa:
   smart_home:
@@ -66,24 +66,6 @@ binary_sensor:
   - platform: workday
     country: UK
     workdays: [ mon, tue, wed, thu, fri ]
-
-
-calendar:
-  - platform: caldav
-    url: https://caldav.icloud.com 
-    username: !secret icloud_username
-    password: !secret icloud_app_specific_password
-    calendars:
-      - 'Calendar'
-
-
-#emulated_hue:
-#  host_ip: 192.168.40.80
-#  listen_port: 8300
-#  exposed_domains:
-#    - input_boolean
-#    - light
-#    - switch
 
 
 history_graph:
@@ -151,19 +133,13 @@ logbook:
       - sensor.met_office_weather
       - automation.heating_relight_hourly
 
-#media_player:
-#  - platform: firetv
-#    name: Living Room TV
-#    host: 192.168.40.35
-#    adbkey: "/home/homeassistant/.homeassistant/config/firetv/adbkey"
-#    get_source: false
-#    get_sources: false
 
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
   structure:
     - St Helena Road
+
 
 notify:
  - platform: ios
@@ -190,7 +166,6 @@ sensor:
     region: 'EU'
     name: Geoff Commute
     incl_filter: M62
-    #excl_filter: Stanningley
   - platform: fritzbox_netmonitor
   - platform: template
     sensors:
@@ -215,6 +190,7 @@ sensor:
               NaN
             {% endif %}
        waste_collection:
+          icon_template: mdi:delete
           friendly_name: Next Waste Collection
           entity_id: sun.sun
           value_template: >
@@ -240,10 +216,12 @@ switch:
       17: Heating Relight
     invert_logic: true
 
+
 tplink:
   discovery: false
   switch:
     - host: 192.168.40.6
+
 
 tradfri:
   host: 192.168.40.42
@@ -251,4 +229,3 @@ tradfri:
 
 group: !include groups.yaml
 automation: !include_dir_merge_list automations/
-script: !include scripts.yaml

@@ -1,14 +1,14 @@
 - alias: Notify - Waste Collection
   trigger:
     - platform: time
-      at: '07:16:00'
+      at: '07:20:00'
   condition:
     condition: time
     weekday: fri
   action:
-    - service: notify.ios_geoff
+    - service: notify.mobile_app_gef_tactics
       data:
         message: "{{ states.sensor.waste_collection.state }} waste collection is today!"
-    - service: notify.ios_lix
+    - service: notify.mobile_app_lixs_iphone
       data:
         message: "{{ states.sensor.waste_collection.state }} waste collection is today!"

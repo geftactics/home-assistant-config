@@ -39,13 +39,13 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "device_tracker.geoff"
+                                    "entity": "device_tracker.gef_tactics"
                                 },
                                 {
                                     "entity": "device_tracker.lixs_iphone"
                                 },
                                 {
-                                    "entity": "device_tracker.iphone"
+                                    "entity": "device_tracker.angus"
                                 }
                             ],
                             "show_header_toggle": false,
