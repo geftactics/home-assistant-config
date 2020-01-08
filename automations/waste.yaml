@@ -1,10 +1,10 @@
 - alias: Notify - Waste Collection
   trigger:
     - platform: time
-      at: '07:20:00'
+      at: '20:00:00'
   condition:
     condition: time
-    weekday: fri
+    weekday: thu
   action:
     - service: notify.mobile_app_gef_tactics
       data:
